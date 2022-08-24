@@ -1,6 +1,9 @@
+import { useState, useEffect } from 'react';
 import type { NextPage } from 'next';
 import styled from 'styled-components';
 import SkillCard from '../components/SkillCard';
+import { REPL_MODE_STRICT } from 'repl';
+import ProjectCard from '../components/ProjectCard';
 
 const Main = styled.main`
   background: #eee;
@@ -21,11 +24,31 @@ const TopSection = styled.section`
 const Section = styled.section`
   color: #000;
   display: flex;
-  justify-content: space-around;
 `
 
+type Repo = {
+  name: string;
+  updatedAt: string;
+}
+
 const Home: NextPage = () => {
-  const technologies = ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'React', 'Svelte']
+  const [currentProjects, setCurrentProjects] = useState([]);
+  const [pastProjects, setPastProjects] = useState([]);
+
+  useEffect(() => {
+    const getRepoInfo = async () => {
+      const res = await fetch(`https://api.github.com/users/zneib/repos`);
+      const repos = await res.json();
+      if (repos) {
+        const sorted = repos.sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
+        setCurrentProjects(sorted.splice(0, 3));
+        setPastProjects(sorted.splice(4, 6));
+      }
+    }
+    getRepoInfo();
+  }, [])
+
+  const technologies = ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'React', 'Svelte', 'Deno', 'Node']
   return (
     <Main>
       <TopSection>
@@ -41,14 +64,20 @@ const Home: NextPage = () => {
       <h3>Technologies / Frameworks</h3>
       <Section>
         {technologies.map((item, index) => (
-          <SkillCard key={index} name={item} />
+          <SkillCard key={index} image={item.toLowerCase()} name={item} />
         ))}
       </Section>
       <h3>Current Projects</h3>
       <Section>
+        {currentProjects?.length > 0 && currentProjects.map((item, index) => (
+          <ProjectCard key={index} name={item.name} homepage={item.homepage} />
+        ))}
       </Section>
       <h3>Past Projects</h3>
       <Section>
+        {pastProjects?.length > 0 && pastProjects.map((item, index) => (
+          <ProjectCard key={index} name={item.name} homepage={item.homepage} />
+        ))}
       </Section>
     </Main>
   )
