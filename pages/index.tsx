@@ -14,6 +14,7 @@ const Main = styled.main`
   padding: 50px 100px;
   & > h3 {
     color: #000;
+    margin-top: 50px;
   }
 `
 
@@ -21,6 +22,12 @@ const TopSection = styled.section`
   display: flex;
   justify-content: space-between;
   color: #000;
+`
+
+const SocialLinks = styled.div`
+  & > a:nth-child(1) {
+    margin-right: 20px;
+  }
 `
 
 const Section = styled.section`
@@ -55,14 +62,14 @@ const Home: NextPage = () => {
     <Main>
       <TopSection>
         <h2>Blog</h2>
-        <div>
+        <SocialLinks>
           <a href="https://github.com/zneib">
             <Image src={github} alt="source control" />
           </a>
           <a href="https://twitter.com/zachadackis">
             <Image src={twitter} alt="social" />
           </a>
-        </div>
+        </SocialLinks>
       </TopSection>
       <h3>Summary</h3>
       <Section>
@@ -82,7 +89,7 @@ const Home: NextPage = () => {
       <h3>Past Projects</h3>
       <Section>
         {pastProjects?.length > 0 && pastProjects.map((item, index) => (
-          <ProjectCard key={index} name={item.name} homepage={item.homepage} />
+          <ProjectCard key={index} name={item.name} homepage={item.homepage} url={item.html_url} />
         ))}
       </Section>
     </Main>
