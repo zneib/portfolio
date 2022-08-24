@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import type { NextPage } from 'next';
+import Image from 'next/image';
 import styled from 'styled-components';
 import SkillCard from '../components/SkillCard';
-import { REPL_MODE_STRICT } from 'repl';
 import ProjectCard from '../components/ProjectCard';
+import twitter from '../public/twitter.svg';
+import github from '../public/github.svg';
 
 const Main = styled.main`
   background: #eee;
@@ -54,8 +56,12 @@ const Home: NextPage = () => {
       <TopSection>
         <h2>Blog</h2>
         <div>
-          <div>Twitter</div>
-          <div>Github</div>
+          <a href="https://github.com/zneib">
+            <Image src={github} alt="source control" />
+          </a>
+          <a href="https://twitter.com/zachadackis">
+            <Image src={twitter} alt="social" />
+          </a>
         </div>
       </TopSection>
       <h3>Summary</h3>
