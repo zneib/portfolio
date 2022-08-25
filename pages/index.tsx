@@ -37,7 +37,10 @@ const Section = styled.section`
 
 type Repo = {
   name: string;
-  updatedAt: string;
+  description: string;
+  homepage: string;
+  html_url: string;
+  updated_at: string;
 }
 
 const Home: NextPage = () => {
@@ -49,7 +52,7 @@ const Home: NextPage = () => {
       const res = await fetch(`https://api.github.com/users/zneib/repos`);
       const repos = await res.json();
       if (repos) {
-        const sorted = repos.sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
+        const sorted = repos.sort((a: Repo, b: Repo) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
         setCurrentProjects(sorted.splice(0, 3));
         setPastProjects(sorted.splice(4, 6));
       }
@@ -82,14 +85,14 @@ const Home: NextPage = () => {
       </Section>
       <h3>Current Projects</h3>
       <Section>
-        {currentProjects?.length > 0 && currentProjects.map((item, index) => (
-          <ProjectCard key={index} name={item.name} homepage={item.homepage} />
+        {currentProjects?.length > 0 && currentProjects.map((item: Repo, index) => (
+          <ProjectCard key={index} name={item.name} description={item.description} homepage={item.homepage} url={item.html_url} />
         ))}
       </Section>
       <h3>Past Projects</h3>
       <Section>
-        {pastProjects?.length > 0 && pastProjects.map((item, index) => (
-          <ProjectCard key={index} name={item.name} homepage={item.homepage} url={item.html_url} />
+        {pastProjects?.length > 0 && pastProjects.map((item: Repo, index) => (
+          <ProjectCard key={index} name={item.name} description={item.description} homepage={item.homepage} url={item.html_url} />
         ))}
       </Section>
     </Main>
