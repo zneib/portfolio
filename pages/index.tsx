@@ -35,6 +35,10 @@ const Section = styled.section`
   display: flex;
 `
 
+const SummaryText = styled.p`
+  margin: 5px 0;
+`
+
 type Repo = {
   name: string;
   description: string;
@@ -60,11 +64,13 @@ const Home: NextPage = () => {
     getRepoInfo();
   }, [])
 
-  const technologies = ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'React', 'Svelte', 'Deno', 'Node']
+  const technologies = [ 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Svelte', 'Deno', 'Node']
   return (
     <Main>
       <TopSection>
-        <h2>Blog</h2>
+        <a href="https://blog-nu-mocha.vercel.app/">
+          <h2>Blog</h2>
+        </a>
         <SocialLinks>
           <a href="https://github.com/zneib">
             <Image src={github} alt="source control" />
@@ -76,8 +82,9 @@ const Home: NextPage = () => {
       </TopSection>
       <h3>Summary</h3>
       <Section>
+        <SummaryText>Front End Engineer /  UI Specialist / Aspiring Full Stack Engineer </SummaryText>
       </Section>
-      <h3>Technologies / Frameworks</h3>
+      <h3>Favorite Technologies / Frameworks</h3>
       <Section>
         {technologies.map((item, index) => (
           <SkillCard key={index} image={item.toLowerCase()} name={item} />
