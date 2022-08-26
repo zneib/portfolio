@@ -10,8 +10,9 @@ import github from '../public/github.svg';
 
 const Main = styled.main`
   width: 100%;
-  height: 100vh;
   padding: 50px 100px;
+  display: inline-block;
+  background: linear-gradient(115deg, #E4E7EB,  #CBD2D9);
   & > h3 {
     color: #000;
     margin-top: 50px;
@@ -21,6 +22,12 @@ const Main = styled.main`
     width: 100vw;
     padding: 10px 20px;
   }
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(115deg, #243b53, #486581);
+    & > h3 {
+      color: var(--gray-nine);
+    }
+  }
 `
 
 const TopSection = styled.section`
@@ -28,6 +35,9 @@ const TopSection = styled.section`
   align-items: center;
   justify-content: space-between;
   color: #000;
+  @media (prefers-color-scheme: dark) {
+    color: var(--gray-ten);
+  }
 `
 
 const SocialLinks = styled.div`
@@ -46,6 +56,9 @@ const SummaryText = styled.p`
   margin: 5px 0;
   @media (max-width: 768px) {
     font-size: 16px;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: var(--gray-ten);
   }
 `
 
