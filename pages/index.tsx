@@ -70,10 +70,6 @@ type Repo = {
   updated_at: string;
 }
 
-type HeaderTypes = {
-  authorization: string | undefined;
-}
-
 const Home: NextPage = () => {
   const [currentProjects, setCurrentProjects] = useState([]);
   const [pastProjects, setPastProjects] = useState([]);
