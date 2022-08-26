@@ -11,6 +11,7 @@ import html from '../public/html.svg';
 
 const Card = styled.div`
   display: flex;
+  align-items: center;
   background: #fff;
   width: auto;
   border: none;
@@ -59,7 +60,7 @@ export default function SkillCard({ image, name }: SkillCardProps) {
   }
   return (
     <Card>
-      <Image src={imgSrc} width="20px" height="20px" alt="Tech Icon" />
+      <Image src={imgSrc} width="24px" height="24px" alt="Tech Icon" />
       <Name>{name}</Name>
     </Card>
   )
