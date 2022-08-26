@@ -89,7 +89,6 @@ const Home: NextPage = () => {
     <Main>
       <Head>
         <title>Zach Neibaur - Portfolio</title>
-        <meta charset="utf-8" />
         <link rel="icon" href="/brackets.svg" />
         <meta name="viewport" content="width=device-width" />
       </Head>
