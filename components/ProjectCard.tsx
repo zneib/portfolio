@@ -73,7 +73,11 @@ export default function ProjectCard({ name, description, homepage, url }: Projec
   const [languages, setLanguages] = useState([]);
   useEffect(() => {
     const getLanguageInfo = async () => {
-      const res = await fetch(`https://api.github.com/repos/zneib/${name}/languages?client_id=${process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID}&client_secret=${process.env.NEXT_PUBLIC_GITHUB_CLIENT_SECRET}`)
+      const res = await fetch(`https://api.github.com/repos/zneib/${name}/languages`, {
+        headers: {
+          'Authorization': process.env.NEXT_PUBLIC_GITHUB_TOKEN
+        }
+      })
       const langInfo = await res.json();
       console.log(langInfo);
       setLanguages(langInfo);

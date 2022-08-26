@@ -53,7 +53,11 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     const getRepoInfo = async () => {
-      const res = await fetch(`https://api.github.com/users/zneib/repos?client_id=${process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID}&client_secret=${process.env.NEXT_PUBLIC_GITHUB_CLIENT_SECRET}`);
+      const res = await fetch(`https://api.github.com/users/zneib/repos`, {
+        headers: {
+          'Authorization': process.env.NEXT_PUBLIC_GITHUB_TOKEN
+        }
+      });
       const repos = await res.json();
       if (repos) {
         const sorted = repos.sort((a: Repo, b: Repo) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
