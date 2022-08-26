@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import Image from 'next/image';
 import styled from 'styled-components';
 import SkillCard from '../components/SkillCard';
@@ -15,6 +16,10 @@ const Main = styled.main`
   & > h3 {
     color: #000;
     margin-top: 50px;
+  }
+  @media (max-width: 768px) {
+    width: 100vw;
+    padding: 10px 20px;
   }
 `
 
@@ -37,6 +42,9 @@ const Section = styled.section`
 
 const SummaryText = styled.p`
   margin: 5px 0;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `
 
 type Repo = {
@@ -75,6 +83,12 @@ const Home: NextPage = () => {
   const technologies = [ 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Svelte', 'Deno', 'Node']
   return (
     <Main>
+      <Head>
+        <title>Zach Neibaur - Portfolio</title>
+        <meta charset="utf-8" />
+        <link rel="icon" href="/brackets.svg" />
+        <meta name="viewport" content="width=device-width" />
+      </Head>
       <TopSection>
         <a href="https://blog-nu-mocha.vercel.app/">
           <h2>Blog</h2>
