@@ -1,16 +1,9 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import TechImage from './TechImage';
 import styled from 'styled-components';
 import github from '../public/github.svg';
 import link from '../public/link.svg';
-import deno from '../public/deno.svg';
-import svelte from '../public/svelte.svg';
-import react from '../public/react.svg';
-import node from '../public/node.svg';
-import typescript from '../public/typescript.svg';
-import javascript from '../public/javascript.svg';
-import css from '../public/css.svg';
-import html from '../public/html.svg';
 
 const Card = styled.div`
   position: relative;
@@ -53,7 +46,7 @@ const GitLink = styled.a`
 
 const LanguageRow = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
   left: 5px;
   display: flex;
 `
@@ -65,12 +58,8 @@ type ProjectCardProps = {
   url: string;
 }
 
-type Language = {
-
-}
-
 export default function ProjectCard({ name, description, homepage, url }: ProjectCardProps) {
-  const [languages, setLanguages] = useState([]);
+  const [languages, setLanguages] = useState<string[]>([]);
   useEffect(() => {
     const getLanguageInfo = async () => {
       const res = await fetch(`https://api.github.com/repos/zneib/${name}/languages`, {
@@ -79,21 +68,22 @@ export default function ProjectCard({ name, description, homepage, url }: Projec
         }
       })
       const langInfo = await res.json();
-      console.log(langInfo);
-      setLanguages(langInfo);
+      setLanguages(Object.keys(langInfo));
     }
     getLanguageInfo();
   }, [name])
+
+  console.log(languages)
 
   return (
     <Card>
       <Name>{name}</Name>
       <Description>{description}</Description>
-      {/* <LanguageRow>
+      <LanguageRow>
         {languages?.length > 0 && languages.map((lang, index) => (
-          <Image key={index} src={lang.toLowerCase()} alt="tech image" />
+          <TechImage key={index} image={lang.toLowerCase()} />
         ))}
-      </LanguageRow> */}
+      </LanguageRow>
       {homepage && (<PageLink href={`https://${homepage}`}>
         <Image src={link} width="18px" height="18px" alt="project page" />
       </PageLink>
