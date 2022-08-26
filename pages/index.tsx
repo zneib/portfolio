@@ -25,6 +25,7 @@ const Main = styled.main`
 
 const TopSection = styled.section`
   display: flex;
+  align-items: center;
   justify-content: space-between;
   color: #000;
 `
@@ -38,6 +39,9 @@ const SocialLinks = styled.div`
 const Section = styled.section`
   color: #000;
   display: flex;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `
 
 const SummaryText = styled.p`

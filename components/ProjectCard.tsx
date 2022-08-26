@@ -18,6 +18,10 @@ const Card = styled.div`
   &:hover {
     box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.3);
   }
+  @media (max-width: 768px) {
+    margin: 5px;
+    min-width: 100%;
+  }
 `
 
 const Name = styled.p`

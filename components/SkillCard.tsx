@@ -18,6 +18,9 @@ const Card = styled.div`
   border-radius: 5px;
   padding: 5px 10px;
   margin-right: 25px;
+  @media (max-width: 768px) {
+    margin: 5px;
+  }
 `
 const Name = styled.span`
   margin: 0 5px;
