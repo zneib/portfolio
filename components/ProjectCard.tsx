@@ -75,7 +75,7 @@ export default function ProjectCard({ name, description, homepage, url }: Projec
     const getLanguageInfo = async () => {
       const res = await fetch(`https://api.github.com/repos/zneib/${name}/languages`, {
         headers: {
-          'Authorization': process.env.NEXT_PUBLIC_GITHUB_TOKEN
+          Authorization: process.env.NEXT_PUBLIC_GITHUB_TOKEN
         }
       })
       const langInfo = await res.json();
