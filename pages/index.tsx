@@ -98,13 +98,13 @@ const Home: NextPage = () => {
           <SkillCard key={index} image={item.toLowerCase()} name={item} />
         ))}
       </Section>
-      <h3>Current Projects</h3>
+      <h3>Active Projects</h3>
       <Section>
         {currentProjects?.length > 0 && currentProjects.map((item: Repo, index) => (
           <ProjectCard key={index} name={item.name} description={item.description} homepage={item.homepage} url={item.html_url} />
         ))}
       </Section>
-      <h3>Past Projects</h3>
+      <h3>Hibernating Projects</h3>
       <Section>
         {pastProjects?.length > 0 && pastProjects.map((item: Repo, index) => (
           <ProjectCard key={index} name={item.name} description={item.description} homepage={item.homepage} url={item.html_url} />
