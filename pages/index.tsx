@@ -9,13 +9,13 @@ import twitter from '../public/twitter.svg';
 import github from '../public/github.svg';
 
 const Main = styled.main`
-  background: #eee;
   width: 100%;
   height: 100vh;
   padding: 50px 100px;
   & > h3 {
     color: #000;
     margin-top: 50px;
+    margin-bottom: 20px;
   }
   @media (max-width: 768px) {
     width: 100vw;
@@ -39,9 +39,7 @@ const SocialLinks = styled.div`
 const Section = styled.section`
   color: #000;
   display: flex;
-  @media (max-width: 768px) {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
 `
 
 const SummaryText = styled.p`

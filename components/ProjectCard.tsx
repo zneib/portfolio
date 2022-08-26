@@ -13,7 +13,7 @@ const Card = styled.div`
   max-width: 350px;
   padding: 5px 20px 5px 10px;
   height: 150px;
-  margin-right: 25px;
+  margin: 0 25px 10px 0;
   box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
   &:hover {
     box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.3);
