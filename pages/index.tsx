@@ -47,6 +47,10 @@ type Repo = {
   updated_at: string;
 }
 
+type HeaderTypes = {
+  authorization: string | undefined;
+}
+
 const Home: NextPage = () => {
   const [currentProjects, setCurrentProjects] = useState([]);
   const [pastProjects, setPastProjects] = useState([]);
@@ -55,7 +59,7 @@ const Home: NextPage = () => {
     const getRepoInfo = async () => {
       const res = await fetch(`https://api.github.com/users/zneib/repos`, {
         headers: {
-          Authorization: process.env.NEXT_PUBLIC_GITHUB_TOKEN
+          Authorization: `${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`
         }
       });
       const repos = await res.json();
