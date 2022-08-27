@@ -15,7 +15,15 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: #000;
-  background: #eee;
+  /* background: #eee; */
+  /* linear-gradient(115deg, #E4E7EB,  #CBD2D9) */
+  background-image: linear-gradient(115deg, #E4E7EB, #616E7C), url(../public/brackets.svg);
+  background-repeat: no-repeat;
+  /* background-size: 600px; */
+  /* background-color: #eee; */
+  background-position: top right;
+  /* background-attachment: fixed; */
+  background-blend-mode: multiply;
 }
 
 a {

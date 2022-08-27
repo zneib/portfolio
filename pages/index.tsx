@@ -7,12 +7,15 @@ import SkillCard from '../components/SkillCard';
 import ProjectCard from '../components/ProjectCard';
 import twitter from '../public/twitter.svg';
 import github from '../public/github.svg';
+import brackets from '../public/brackets.svg';
 
 const Main = styled.main`
   width: 100%;
   padding: 50px 100px;
   display: inline-block;
-  background: linear-gradient(115deg, #E4E7EB,  #CBD2D9);
+  /* background: linear-gradient(115deg, #E4E7EB,  #CBD2D9); */
+  /* background-image: url(${brackets}); */
+  /* background-blend-mode: multiply; */
   & > h3 {
     color: #000;
     margin-top: 50px;
@@ -96,7 +99,7 @@ const Home: NextPage = () => {
     <Main>
       <Head>
         <title>Zach Neibaur - Portfolio</title>
-        <link rel="icon" href="/brackets.svg" />
+        <link rel="icon" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
       </Head>
       <TopSection>
