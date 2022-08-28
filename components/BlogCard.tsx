@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styled from 'styled-components';
+import svelte from '../public/svelte.svg';
 
 const Wrapper = styled.aside`
   display: flex;
@@ -12,8 +13,10 @@ const DateInfo = styled.div`
   font-size: 14px;
   margin: 0;
   text-align: center;
-  flex: 1;
-  color: var(--gray-eight);
+  color: var(--gray-two);
+  border-radius: 5px;
+  padding: 7px 25px;
+  background: transparent;
   & > p {
     margin: 0;
   }
@@ -23,6 +26,9 @@ const DateInfo = styled.div`
   }
   & > p.year {
     font-size: 12px;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: var(--gray-nine);
   }
 `
 
@@ -49,6 +55,12 @@ const Card = styled.div`
   }
 `
 
+const Icon = styled.div`
+  position: absolute;
+  top: -10px;
+  right: -10px;
+`
+
 export default function BlogCard() {
 
   return (
@@ -58,7 +70,10 @@ export default function BlogCard() {
         <p className="year">2022</p>
       </DateInfo>
       <Card>
-        Do some stuff
+        <span>How to bind child component state and events to parent components</span>
+        <Icon>
+          <Image style={{ position: 'relative'}} src={svelte} width="25px" height="25px" alt="tech used" />
+        </Icon>
       </Card>
     </Wrapper>
   )
