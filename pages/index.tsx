@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
 import SkillCard from '../components/SkillCard';
@@ -98,9 +99,11 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width" />
       </Head>
       <TopSection>
-        <a href="https://blog-nu-mocha.vercel.app/">
-          <h2>Blog</h2>
-        </a>
+        <Link href="/blog">
+          <a>
+            <h2>Blog</h2>
+          </a>
+        </Link>
         <SocialLinks>
           <a href="https://github.com/zneib">
             <Image src={github} alt="source control" />

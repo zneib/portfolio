@@ -7,7 +7,8 @@ import link from '../public/link.svg';
 
 const Card = styled.div`
   position: relative;
-  background: #fff;
+  color: var(--gray-two);
+  background: var(--gray-nine);
   border-radius: 5px;
   min-width: 250px;
   max-width: 350px;
@@ -30,7 +31,7 @@ const Card = styled.div`
 
 const Name = styled.p`
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 `
 
@@ -80,8 +81,6 @@ export default function ProjectCard({ name, description, homepage, url }: Projec
     }
     getLanguageInfo();
   }, [name])
-
-  console.log(languages)
 
   return (
     <Card>

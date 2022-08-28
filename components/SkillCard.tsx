@@ -12,9 +12,9 @@ import html from '../public/html.svg';
 const Card = styled.div`
   display: flex;
   align-items: center;
-  background: #fff;
+  color: var(--gray-two);
+  background: var(--gray-nine);
   width: auto;
-  border: none;
   border-radius: 5px;
   padding: 5px 10px;
   margin: 10px 25px 0 0;
