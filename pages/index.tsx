@@ -7,15 +7,11 @@ import SkillCard from '../components/SkillCard';
 import ProjectCard from '../components/ProjectCard';
 import twitter from '../public/twitter.svg';
 import github from '../public/github.svg';
-import brackets from '../public/brackets.svg';
 
 const Main = styled.main`
   width: 100%;
   padding: 50px 100px;
   display: inline-block;
-  /* background: linear-gradient(115deg, #E4E7EB,  #CBD2D9); */
-  /* background-image: url(${brackets}); */
-  /* background-blend-mode: multiply; */
   & > h3 {
     color: #000;
     margin-top: 50px;
@@ -26,7 +22,6 @@ const Main = styled.main`
     padding: 10px 20px;
   }
   @media (prefers-color-scheme: dark) {
-    background: linear-gradient(115deg, #243b53, #486581);
     & > h3 {
       color: var(--gray-nine);
     }

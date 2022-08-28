@@ -4,6 +4,9 @@
   --gray-three: #3E4C59;
   --gray-four: #52606D;
   --gray-five: #616E7C;
+  --gray-six: #7b8794;
+  --gray-seven: #9aa5b1;
+  --gray-eight: #cbd2d9;
   --gray-nine: #E4E7EB;
   --gray-ten: #F5F7FA;
 }
@@ -15,14 +18,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: #000;
-  /* background: #eee; */
-  /* linear-gradient(115deg, #E4E7EB,  #CBD2D9) */
   background-image: linear-gradient(115deg, #E4E7EB, #616E7C), url(../public/brackets.svg);
   background-repeat: no-repeat;
-  /* background-size: 600px; */
-  /* background-color: #eee; */
   background-position: top right;
-  /* background-attachment: fixed; */
   background-blend-mode: multiply;
 }
 
@@ -40,6 +38,9 @@ a {
     color-scheme: dark;
   }
   body {
+    background: linear-gradient(115deg, #243b53, #486581), url(../public/brackets.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
     color: var(--gray-ten);
   }
 }

@@ -13,7 +13,7 @@ const Card = styled.div`
   max-width: 350px;
   padding: 5px 20px 5px 10px;
   height: 150px;
-  margin: 0 25px 10px 0;
+  margin: 0 20px 20px 0;
   box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
   &:hover {
     box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.3);
@@ -21,6 +21,10 @@ const Card = styled.div`
   @media (max-width: 768px) {
     margin: 5px;
     min-width: 100%;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: var(--gray-nine);
+    background: var(--gray-five);
   }
 `
 

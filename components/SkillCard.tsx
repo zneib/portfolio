@@ -21,6 +21,10 @@ const Card = styled.div`
   @media (max-width: 768px) {
     margin: 5px;
   }
+  @media (prefers-color-scheme: dark) {
+    color: var(--gray-nine);
+    background: var(--gray-five);
+  }
 `
 const Name = styled.span`
   margin: 0 5px;
