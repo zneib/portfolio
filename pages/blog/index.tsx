@@ -6,6 +6,14 @@ import styled from 'styled-components';
 import twitter from '../../public/twitter.svg';
 import github from '../../public/github.svg';
 import BlogCard from "../../components/BlogCard";
+import deno from '../../public/deno.svg';
+import svelte from '../../public/svelte.svg';
+import react from '../../public/react.svg';
+import node from '../../public/node.svg';
+import typescript from '../../public/typescript.svg';
+import javascript from '../../public/javascript.svg';
+import css from '../../public/css.svg';
+import html from '../../public/html.svg';
 
 const Main = styled.main`
   width: 100%;
@@ -43,6 +51,30 @@ const SocialLinks = styled.div`
   }
 `
 
+const Wrapper = styled.article`
+  display: flex;
+`
+
+const LeftNav = styled.aside`
+  display: flex;
+  flex-direction: column;
+`
+const NavItem = styled.div`
+  margin-top: 15px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  & > span {
+    margin-right: 10px;
+  }
+`
+
+const BlogContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 6;
+`
+
 const BlogHome: NextPage = () => {
   return (
     <Main>
@@ -66,12 +98,26 @@ const BlogHome: NextPage = () => {
           </a>
         </SocialLinks>
       </TopSection>
-      <BlogCard />
-      <BlogCard />
-      <BlogCard />
-      <BlogCard />
-      <BlogCard />
-      <BlogCard />
+      <Wrapper>
+        <LeftNav>
+          <NavItem><span>Svelte</span><Image src={svelte} alt="tech icon" width="15px" height="15px" /></NavItem>
+          <NavItem><span>React</span><Image src={react} alt="tech icon" width="15px" height="15px" /></NavItem>
+          <NavItem><span>JavaScript</span><Image src={javascript} alt="tech icon" width="15px" height="15px" /></NavItem>
+          <NavItem><span>TypeScript</span><Image src={typescript} alt="tech icon" width="15px" height="15px" /></NavItem>
+          <NavItem><span>Deno</span><Image src={deno} alt="tech icon" width="15px" height="15px" /></NavItem>
+          <NavItem><span>HTML</span><Image src={html} alt="tech icon" width="15px" height="15px" /></NavItem>
+          <NavItem><span>CSS</span><Image src={css} alt="tech icon" width="15px" height="15px" /></NavItem>
+          <NavItem><span>Node</span><Image src={node} alt="tech icon" width="15px" height="15px" /></NavItem>
+        </LeftNav>
+        <BlogContent>
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+        </BlogContent>
+      </Wrapper>
     </Main>
   )
 }
