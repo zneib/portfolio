@@ -110,12 +110,7 @@ const BlogHome: NextPage = () => {
           <NavItem><span>Node</span><Image src={node} alt="tech icon" width="15px" height="15px" /></NavItem>
         </LeftNav>
         <BlogContent>
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
+          <BlogCard contentType="svelte" title="How to bind child component state and events to parent components" month="Aug" year="2022" />
         </BlogContent>
       </Wrapper>
     </Main>

@@ -61,16 +61,22 @@ const Icon = styled.div`
   right: -10px;
 `
 
-export default function BlogCard() {
+type BlogCardProps = {
+  contentType: string;
+  title: string;
+  month: string;
+  year: string;
+}
 
+export default function BlogCard({ contentType, title, month, year }: BlogCardProps) {
   return (
     <Wrapper>
       <DateInfo>
-        <p className="month">Aug</p>
-        <p className="year">2022</p>
+        <p className="month">{month}</p>
+        <p className="year">{year}</p>
       </DateInfo>
       <Card>
-        <span>How to bind child component state and events to parent components</span>
+        <span>{title}</span>
         <Icon>
           <Image style={{ position: 'relative'}} src={svelte} width="25px" height="25px" alt="tech used" />
         </Icon>
