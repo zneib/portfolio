@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import svelte from '../public/svelte.svg';
+import deno from '../public/deno.svg';
 
 const Wrapper = styled.aside`
   display: flex;
@@ -69,6 +70,17 @@ type BlogCardProps = {
 }
 
 export default function BlogCard({ contentType, title, month, year }: BlogCardProps) {
+  let imgSrc;
+  switch (contentType) {
+    case 'deno':
+      imgSrc = deno
+      break;
+    case 'svelte':
+      imgSrc = svelte
+      break;
+    default:
+      break;
+  }
   return (
     <Wrapper>
       <DateInfo>
@@ -78,7 +90,7 @@ export default function BlogCard({ contentType, title, month, year }: BlogCardPr
       <Card>
         <span>{title}</span>
         <Icon>
-          <Image style={{ position: 'relative'}} src={svelte} width="25px" height="25px" alt="tech used" />
+          <Image style={{ position: 'relative'}} src={imgSrc} width="25px" height="25px" alt="tech used" />
         </Icon>
       </Card>
     </Wrapper>

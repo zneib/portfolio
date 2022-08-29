@@ -111,6 +111,7 @@ const BlogHome: NextPage = () => {
         </LeftNav>
         <BlogContent>
           <BlogCard contentType="svelte" title="How to bind child component state and events to parent components" month="Aug" year="2022" />
+          <BlogCard contentType="deno" title="How to use environment variables in Deno CLI and Deno Deploy" month="Sept" year="2022" />
         </BlogContent>
       </Wrapper>
     </Main>
