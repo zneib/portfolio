@@ -110,8 +110,12 @@ const BlogHome: NextPage = () => {
           <NavItem><span>Node</span><Image src={node} alt="tech icon" width="15px" height="15px" /></NavItem>
         </LeftNav>
         <BlogContent>
-          <BlogCard contentType="svelte" title="How to bind child component state and events to parent components" month="Aug" year="2022" />
-          <BlogCard contentType="deno" title="How to use environment variables in Deno CLI and Deno Deploy" month="Sept" year="2022" />
+          <Link href="/blog/svelte/child-binding">
+            <a><BlogCard contentType="svelte" title="How to bind child component state and events to parent components" month="Aug" year="2022" /></a>
+          </Link>
+          <Link href="/blog/deno/variables">
+            <a><BlogCard contentType="deno" title="How to use environment variables in your Deno apps" month="Sept" year="2022" /></a>
+          </Link>
         </BlogContent>
       </Wrapper>
     </Main>
