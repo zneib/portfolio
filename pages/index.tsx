@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ReactElement } from 'react';
 import type { NextPage } from 'next';
+import Layout from '../components/Layout';
+import type { NextPageWithLayout } from './_app';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,26 +10,6 @@ import SkillCard from '../components/SkillCard';
 import ProjectCard from '../components/ProjectCard';
 import twitter from '../public/twitter.svg';
 import github from '../public/github.svg';
-
-const Main = styled.main`
-  width: 100%;
-  padding: 50px 100px;
-  display: inline-block;
-  & > h3 {
-    color: #000;
-    margin-top: 50px;
-    margin-bottom: 20px;
-  }
-  @media (max-width: 768px) {
-    width: 100vw;
-    padding: 10px 20px;
-  }
-  @media (prefers-color-scheme: dark) {
-    & > h3 {
-      color: var(--gray-nine);
-    }
-  }
-`
 
 const TopSection = styled.section`
   display: flex;
@@ -69,7 +51,7 @@ type Repo = {
   updated_at: string;
 }
 
-const Home: NextPage = () => {
+const Home: NextPageWithLayout = () => {
   const [currentProjects, setCurrentProjects] = useState([]);
   const [pastProjects, setPastProjects] = useState([]);
 
@@ -92,7 +74,7 @@ const Home: NextPage = () => {
 
   const technologies = [ 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Svelte', 'Deno', 'Node']
   return (
-    <Main>
+    <>
       <Head>
         <title>Zach Neibaur - Portfolio</title>
         <link rel="icon" href="/favicon.svg" />
@@ -135,7 +117,15 @@ const Home: NextPage = () => {
           <ProjectCard key={index} name={item.name} description={item.description} homepage={item.homepage} url={item.html_url} />
         ))}
       </Section>
-    </Main>
+    </>
+  )
+}
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
   )
 }
 
