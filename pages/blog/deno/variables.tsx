@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import imageOne from '../../../public/images/deno/deno_variables.png';
 import styled from 'styled-components';
+import { ReactElement } from 'react';
+
+const Nav = styled.nav`
+  width: 100%;
+`
 
 const Wrapper = styled.div`
   display: flex;
@@ -16,7 +21,7 @@ const ImageContainer = styled.div`
   margin: 0 auto;
 `
 
-const DenoVariables = () => {
+export default function DenoVariables() {
   return (
     <Wrapper>
       <p>Deno has a special way of handling environment variables</p>
@@ -29,4 +34,10 @@ const DenoVariables = () => {
   )
 }
 
-export default DenoVariables
+DenoVariables.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Nav>
+      {page}
+    </Nav>
+  )
+}
