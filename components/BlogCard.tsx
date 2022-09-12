@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import svelte from '../public/svelte.svg';
 import deno from '../public/deno.svg';
+import javascript from '../public/javascript.svg';
 
 const Wrapper = styled.aside`
   display: flex;
@@ -77,6 +78,9 @@ export default function BlogCard({ contentType, title, month, year }: BlogCardPr
       break;
     case 'svelte':
       imgSrc = svelte
+      break;
+    case 'javascript':
+      imgSrc = javascript
       break;
     default:
       break;

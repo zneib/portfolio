@@ -116,6 +116,9 @@ const BlogHome: NextPage = () => {
           <Link href="/blog/deno/variables">
             <a><BlogCard contentType="deno" title="How to use environment variables in your Deno apps" month="Sept" year="2022" /></a>
           </Link>
+          <Link href="/blog/javascript/atMethod">
+            <a><BlogCard contentType="javascript" title="Finding last indexes with the array at() method" month="Sept" year="2022" /></a>
+          </Link>
         </BlogContent>
       </Wrapper>
     </Main>
