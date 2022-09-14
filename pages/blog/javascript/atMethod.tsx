@@ -1,18 +1,21 @@
 import { NextPage } from "next";
 import Image from 'next/image';
+import Link from "next/link";
 import styled from 'styled-components';
 import imageOne from '../../../public/images/javascript/at-method.png';
-
-const Nav = styled.nav`
-  width: 100%;
-`
+import twitter from '../../../public/twitter.svg';
+import github from '../../../public/github.svg';
 
 const Wrapper = styled.div`
+  padding: 50px 100px;
+`
+const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 100vh;
   margin: 0 auto;
 `
 const ImageContainer = styled.div`
@@ -20,14 +23,45 @@ const ImageContainer = styled.div`
   text-align: center;
   margin: 0 auto;
 `
+const TopSection = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000;
+  @media (prefers-color-scheme: dark) {
+    color: var(--gray-ten);
+  }
+`
+const SocialLinks = styled.div`
+  & > a:nth-child(1) {
+    margin-right: 20px;
+  }
+`
 
 const AtMethod: NextPage = () => {
   return (
     <Wrapper>
-      <div>Using the <code>at()</code> to find the last item in an array:</div>
-      <ImageContainer>
-        <Image src={imageOne} alt="Code Example" />
-      </ImageContainer>
+      <TopSection>
+        <Link href="/">
+          <a>
+            <h2>Home</h2>
+          </a>
+        </Link>
+        <SocialLinks>
+          <a href="https://github.com/zneib">
+            <Image src={github} alt="source control" />
+          </a>
+          <a href="https://twitter.com/zachadackis">
+            <Image src={twitter} alt="social" />
+          </a>
+        </SocialLinks>
+      </TopSection>
+      <Content>
+        <div>Using the <code>at()</code> to find the last item in an array:</div>
+        <ImageContainer>
+          <Image src={imageOne} alt="Code Example" />
+        </ImageContainer>
+      </Content>
     </Wrapper>
   )
 }
