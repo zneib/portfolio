@@ -42,11 +42,14 @@ const AtMethod: NextPage = () => {
   return (
     <Wrapper>
       <TopSection>
-        <Link href="/">
-          <a>
-            <h2>Home</h2>
-          </a>
-        </Link>
+      <Link href="/blog">
+        <a style={{ display: 'flex', alignItems: 'center' }}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+          <h2 style={{ display: 'inline-block', marginLeft: '5px' }}>Blog</h2>
+        </a>
+      </Link>
         <SocialLinks>
           <a href="https://github.com/zneib">
             <Image src={github} alt="source control" />
@@ -57,7 +60,7 @@ const AtMethod: NextPage = () => {
         </SocialLinks>
       </TopSection>
       <Content>
-        <div>Using the <code>at()</code> to find the last item in an array:</div>
+        <div>Using the <code>at()</code> method to find the last item in an array:</div>
         <ImageContainer>
           <Image src={imageOne} alt="Code Example" />
         </ImageContainer>
