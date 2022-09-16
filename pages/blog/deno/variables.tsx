@@ -70,11 +70,3 @@ export default function DenoVariables() {
     </Wrapper>
   )
 }
-
-DenoVariables.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <Nav>
-      {page}
-    </Nav>
-  )
-}

@@ -19,6 +19,7 @@ const Main = styled.main`
   width: 100%;
   padding: 50px 100px;
   display: inline-block;
+  height: 100vh;
   & > h3 {
     color: #000;
     margin-top: 50px;
