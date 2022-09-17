@@ -4,24 +4,19 @@ import Link from "next/link";
 import styled from 'styled-components';
 import github from '../../../public/github.svg';
 import twitter from '../../../public/twitter.svg';
-import arrow from '../../../public/chevron-left.svg';
 
 const Wrapper = styled.div`
-  padding: 50px 100px;
-`
-const Content = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  padding: 50px 100px;
   height: 100vh;
-  margin: 0 auto;
+`
+const Content = styled.section`
+  flex: 1;
+  width: 100%;
+  padding-top: 50px;
 `
 const ImageContainer = styled.div`
   width: 500px;
-  text-align: center;
-  margin: 0 auto;
 `
 const TopSection = styled.section`
   display: flex;
@@ -38,18 +33,35 @@ const SocialLinks = styled.div`
   }
 `
 
+const LeftSection = styled.div`
+  flex: 1;
+`
+const RightSection = styled.div`
+  flex: 1;
+  text-align: right;
+`
+
+
 const ChildBinding: NextPage = () => {
   return (
     <Wrapper>
-    <TopSection>
-      <Link href="/blog">
-        <a style={{ display: 'flex', alignItems: 'center' }}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-          </svg>
-          <h2 style={{ display: 'inline-block', marginLeft: '5px' }}>Blog</h2>
-        </a>
-      </Link>
+      <LeftSection>
+        <Link href="/blog">
+          <a style={{ display: 'flex', alignItems: 'center' }}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+            <h2 style={{ display: 'inline-block', marginLeft: '0 0 0 5px' }}>Blog</h2>
+          </a>
+        </Link>
+      </LeftSection>
+      <Content>
+        <div>First svelte post</div>
+        <ImageContainer>
+          {/* <Image src={imageOne} alt="Code Example" /> */}
+        </ImageContainer>
+      </Content>
+      <RightSection>
       <SocialLinks>
         <a href="https://github.com/zneib">
           <Image src={github} alt="source control" />
@@ -58,13 +70,7 @@ const ChildBinding: NextPage = () => {
           <Image src={twitter} alt="social" />
         </a>
       </SocialLinks>
-    </TopSection>
-    <Content>
-      <div>First svelte post</div>
-      <ImageContainer>
-        {/* <Image src={imageOne} alt="Code Example" /> */}
-      </ImageContainer>
-    </Content>
+    </RightSection>
   </Wrapper>
   )
 }
