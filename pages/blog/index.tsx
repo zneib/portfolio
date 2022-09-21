@@ -54,11 +54,18 @@ const SocialLinks = styled.div`
 
 const Wrapper = styled.article`
   display: flex;
+  @media (max-width: 768px) {
+    display: block;
+  }
 `
 
 const LeftNav = styled.aside`
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `
 const NavItem = styled.div`
   margin-top: 15px;
@@ -67,6 +74,12 @@ const NavItem = styled.div`
   align-items: center;
   & > span {
     margin-right: 10px;
+  }
+  @media (max-width: 768px) {
+    padding: 2px 5px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    margin: 5px 5px;
   }
 `
 

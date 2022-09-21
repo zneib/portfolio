@@ -9,6 +9,11 @@ const Wrapper = styled.aside`
   align-items: center;
   width: 1000px;
   margin: 0 auto;
+  @media (max-width: 768px) {
+    display: block;
+    width: auto;
+    margin: 10px auto;
+  }
 `
 
 const DateInfo = styled.div`
@@ -31,6 +36,14 @@ const DateInfo = styled.div`
   }
   @media (prefers-color-scheme: dark) {
     color: var(--gray-nine);
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: baseline;
+    padding: 7px 0;
+    & > p.year {
+      margin-left: 5px;
+    }
   }
 `
 
