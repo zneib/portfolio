@@ -14,22 +14,22 @@ const Wrapper = styled.div`
   }
 `
 const Content = styled.section`
-  width: 60%;
+  width: 40%;
   padding-top: 50px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  border-radius: 5px;
+  padding: 25px;
+  background-color: rgba(255,255,255, 0.5);
+  box-shadow: 0px 4px 12px 2px rgba(0,0,0,0.2);
   @media (max-width: 768px) {
     width: 100%;
   }
 `
 const ImageContainer = styled.div`
-  width: 500px;
-  max-width: 500px;
+  width: 100%;
   margin: 25px auto;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
 `
 const SocialLinks = styled.div`
   & > a:nth-child(1) {
@@ -55,7 +55,7 @@ const AtMethod: NextPage = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
             </svg>
-            <h2 style={{ display: 'inline-block', margin: '0 0 0 5px' }}>Blog</h2>
+            <h2 style={{ display: 'inline-block', marginLeft: '0 0 0 5px' }}>Blog</h2>
           </a>
         </Link>
         <SocialLinks>

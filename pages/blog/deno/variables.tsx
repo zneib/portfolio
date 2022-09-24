@@ -13,22 +13,22 @@ const Wrapper = styled.div`
   }
 `
 const Content = styled.section`
-  width: 60%;
+  width: 40%;
   padding-top: 50px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  border-radius: 5px;
+  padding: 25px;
+  background-color: rgba(255,255,255, 0.5);
+  box-shadow: 0px 4px 12px 2px rgba(0,0,0,0.2);
   @media (max-width: 768px) {
     width: 100%;
   }
 `
 const ImageContainer = styled.div`
-  width: 500px;
-  max-width: 500px;
+  width: 100%;
   margin: 25px auto;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
 `
 const SocialLinks = styled.div`
   & > a:nth-child(1) {
