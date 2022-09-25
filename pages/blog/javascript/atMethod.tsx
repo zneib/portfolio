@@ -70,7 +70,7 @@ const AtMethod: NextPage = () => {
       <Content>
         <p>Using the <code>at()</code> method to find the last item in an array:</p>
         <ImageContainer>
-          <Image src={imageOne} alt="Code Example" />
+          <Image src={imageOne} alt="Code Example" placeholder="blur" />
         </ImageContainer>
       </Content>
     </Wrapper>

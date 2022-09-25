@@ -70,7 +70,7 @@ export default function DenoVariables() {
         <p>Deno has a special way of handling environment variables</p>
         <p>Each time you need to access a environment variable, you will put Deno before anything else.</p>
         <ImageContainer>
-          <Image src={imageOne} alt="Code Example" />
+          <Image src={imageOne} alt="Code Example" placeholder="blur" />
         </ImageContainer>
         <a href="https://examples.deno.land/environment-variables">Refer to this other Deno page for more examples</a>
       </Content>

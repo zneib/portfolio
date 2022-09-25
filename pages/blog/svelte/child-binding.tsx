@@ -23,6 +23,10 @@ const TopSection = styled.section`
   align-items: center;
   justify-content: space-between;
   color: #000;
+  border-radius: 5px;
+  padding: 25px;
+  background-color: rgba(255,255,255, 0.5);
+  box-shadow: 0px 4px 12px 2px rgba(0,0,0,0.2);
   @media (prefers-color-scheme: dark) {
     color: var(--gray-ten);
   }
