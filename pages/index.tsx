@@ -52,8 +52,8 @@ type Repo = {
 }
 
 const Home: NextPageWithLayout = () => {
-  const [currentProjects, setCurrentProjects] = useState([]);
-  const [pastProjects, setPastProjects] = useState([]);
+  const [currentProjects, setCurrentProjects] = useState();
+  const [pastProjects, setPastProjects] = useState();
 
   useEffect(() => {
     const getRepoInfo = async () => {
@@ -129,4 +129,23 @@ Home.getLayout = function getLayout(page: ReactElement) {
   )
 }
 
+// export async function getServerSideProps() {
+//   // Fetch the repo data
+//   const res = await fetch(`https://api.github.com/users/zneib/repos`, {
+//     headers: {
+//       Authorization: `${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`
+//     }
+//   });
+//   const repos = await res.json();
+//   console.log(repos);
+//   let sorted;
+//   if (repos) {
+//     sorted = repos.sort((a: Repo, b: Repo) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
+//     // setCurrentProjects(sorted.splice(0, 3));
+//     // setPastProjects(sorted.splice(4, 6));
+//   }
+//   return { props: { sorted } }
+// }
+
 export default Home
+

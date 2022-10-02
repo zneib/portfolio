@@ -22,8 +22,22 @@ const Content = styled.section`
   padding: 25px;
   background-color: rgba(255,255,255, 0.5);
   box-shadow: 0px 4px 12px 2px rgba(0,0,0,0.2);
+  & > hr {
+    width: 100%;
+    border: 0.5px solid var(--gray-seven);
+  }
+  & > span > a {
+    font-size: 14px;
+    padding-left: 10px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   @media (max-width: 768px) {
     width: 100%;
+  }
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--gray-four);
   }
 `
 const ImageContainer = styled.div`
@@ -72,7 +86,9 @@ export default function DenoVariables() {
         <ImageContainer>
           <Image src={imageOne} alt="Code Example" placeholder="blur" />
         </ImageContainer>
-        <a href="https://examples.deno.land/environment-variables">Refer to this other Deno page for more examples</a>
+        <hr />
+        <h4>Links</h4>
+        <span>&gt;<a href="https://examples.deno.land/environment-variables">Deno Variables</a></span>
       </Content>
     </Wrapper>
   )

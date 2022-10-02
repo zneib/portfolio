@@ -68,6 +68,7 @@ type ProjectCardProps = {
 }
 
 export default function ProjectCard({ name, description, homepage, url }: ProjectCardProps) {
+  console.log(name)
   const [languages, setLanguages] = useState<string[]>([]);
   useEffect(() => {
     const getLanguageInfo = async () => {
@@ -82,22 +83,31 @@ export default function ProjectCard({ name, description, homepage, url }: Projec
     getLanguageInfo();
   }, [name])
 
-  return (
-    <Card>
-      <Name>{name}</Name>
-      <Description>{description}</Description>
-      <LanguageRow>
-        {languages?.length > 0 && languages.map((lang, index) => (
-          <TechImage key={index} image={lang.toLowerCase()} />
-        ))}
-      </LanguageRow>
-      {homepage && (<PageLink href={`https://${homepage}`}>
-        <Image src={link} width="18px" height="18px" alt="project page" />
-      </PageLink>
-      )}
-      <GitLink href={url}>
-        <Image src={github} width="20px" height="20px" alt="source control" />
-      </GitLink>
-    </Card>
-  )
+  if (!name) {
+    return (
+      <Card>
+        Loading...
+      </Card>
+    )
+  } else {
+    return (
+      <Card>
+        <Name>{name}</Name>
+        <Description>{description}</Description>
+        <LanguageRow>
+          {languages?.length > 0 && languages.map((lang, index) => (
+            <TechImage key={index} image={lang.toLowerCase()} />
+          ))}
+        </LanguageRow>
+        {homepage && (<PageLink href={`https://${homepage}`}>
+          <Image src={link} width="18px" height="18px" alt="project page" />
+        </PageLink>
+        )}
+        <GitLink href={url}>
+          <Image src={github} width="20px" height="20px" alt="source control" />
+        </GitLink>
+      </Card>
+    )
+  }
+
 }

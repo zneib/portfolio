@@ -23,6 +23,14 @@ const Content = styled.section`
   padding: 25px;
   background-color: rgba(255,255,255, 0.5);
   box-shadow: 0px 4px 12px 2px rgba(0,0,0,0.2);
+  & > hr {
+    width: 100%;
+    border: 0.5px solid var(--gray-seven);
+  }
+  & > a {
+    font-size: 14px;
+    text-decoration: underline;
+  }
   @media (max-width: 768px) {
     width: 100%;
   }
