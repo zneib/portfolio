@@ -52,8 +52,8 @@ type Repo = {
 }
 
 const Home: NextPageWithLayout = () => {
-  const [currentProjects, setCurrentProjects] = useState();
-  const [pastProjects, setPastProjects] = useState();
+  const [currentProjects, setCurrentProjects] = useState([]);
+  const [pastProjects, setPastProjects] = useState([]);
 
   useEffect(() => {
     const getRepoInfo = async () => {
@@ -107,7 +107,7 @@ const Home: NextPageWithLayout = () => {
       </Section>
       <h3>Active Projects</h3>
       <Section>
-        {currentProjects?.length > 0 && currentProjects.map((item: Repo, index) => (
+        {currentProjects?.length > 0 && currentProjects?.map((item: Repo, index) => (
           <ProjectCard key={index} name={item.name} description={item.description} homepage={item.homepage} url={item.html_url} />
         ))}
       </Section>
