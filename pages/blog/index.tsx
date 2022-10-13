@@ -124,6 +124,9 @@ const BlogHome: NextPage = () => {
           <NavItem><span>Node</span><Image src={node} alt="tech icon" width="15px" height="15px" /></NavItem>
         </LeftNav>
         <BlogContent>
+          <Link href="/blog/svelte/class-toggle">
+            <a><BlogCard contentType="svelte" title="An easy way to toggle class names in Svelte components" month="Oct" year="2022" /></a>
+          </Link>
           <Link href="/blog/deno/variables">
             <a><BlogCard contentType="deno" title="How to use environment variables in your Deno apps" month="Sept" year="2022" /></a>
           </Link>

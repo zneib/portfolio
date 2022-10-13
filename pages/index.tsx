@@ -78,7 +78,7 @@ const Home: NextPageWithLayout = () => {
       <Head>
         <title>Zach Neibaur - Portfolio</title>
         <link rel="icon" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <TopSection>
         <Link href="/blog">
