@@ -10,6 +10,7 @@ import SkillCard from '../components/SkillCard';
 import ProjectCard from '../components/ProjectCard';
 import github from '../public/github.svg';
 import codepen from '../public/codepen.svg';
+import codesandbox from '../public/codesandbox.svg';
 
 const TopSection = styled.section`
   display: flex;
@@ -23,6 +24,9 @@ const TopSection = styled.section`
 
 const SocialLinks = styled.div`
   & > a:nth-child(1) {
+    margin-right: 20px;
+  }
+  & > a:nth-child(2) {
     margin-right: 20px;
   }
 `
@@ -92,6 +96,9 @@ const Home: NextPageWithLayout = () => {
           </a>
           <a href="https://codepen.io/zneib/pens/public">
             <Image src={codepen} alt="quick frontend projects" />
+          </a>
+          <a href="https://codesandbox.io/dashboard/recent?workspace=98c8b503-0a70-449f-bb0a-1be0067a8634">
+            <Image src={codesandbox} alt="quick react projects" />
           </a>
         </SocialLinks>
       </TopSection>
