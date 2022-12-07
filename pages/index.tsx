@@ -8,8 +8,8 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import SkillCard from '../components/SkillCard';
 import ProjectCard from '../components/ProjectCard';
-import twitter from '../public/twitter.svg';
 import github from '../public/github.svg';
+import codepen from '../public/codepen.svg';
 
 const TopSection = styled.section`
   display: flex;
@@ -90,8 +90,8 @@ const Home: NextPageWithLayout = () => {
           <a href="https://github.com/zneib">
             <Image src={github} alt="source control" />
           </a>
-          <a href="https://twitter.com/zachadackis">
-            <Image src={twitter} alt="social" />
+          <a href="https://codepen.io/zneib/pens/public">
+            <Image src={codepen} alt="quick frontend projects" />
           </a>
         </SocialLinks>
       </TopSection>
@@ -128,24 +128,6 @@ Home.getLayout = function getLayout(page: ReactElement) {
     </Layout>
   )
 }
-
-// export async function getServerSideProps() {
-//   // Fetch the repo data
-//   const res = await fetch(`https://api.github.com/users/zneib/repos`, {
-//     headers: {
-//       Authorization: `${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`
-//     }
-//   });
-//   const repos = await res.json();
-//   console.log(repos);
-//   let sorted;
-//   if (repos) {
-//     sorted = repos.sort((a: Repo, b: Repo) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
-//     // setCurrentProjects(sorted.splice(0, 3));
-//     // setPastProjects(sorted.splice(4, 6));
-//   }
-//   return { props: { sorted } }
-// }
 
 export default Home
 
