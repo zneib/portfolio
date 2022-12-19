@@ -107,7 +107,7 @@ export default function BlogCard({ contentType, title, month, year }: BlogCardPr
       <Card>
         <span>{title}</span>
         <Icon>
-          <Image style={{ position: 'relative'}} src={imgSrc} width="25px" height="25px" alt="tech used" />
+          <Image style={{ position: 'relative'}} src={imgSrc} alt="tech used" />
         </Icon>
       </Card>
     </Wrapper>

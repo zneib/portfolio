@@ -100,11 +100,11 @@ export default function ProjectCard({ name, description, homepage, url }: Projec
           ))}
         </LanguageRow>
         {homepage && (<PageLink href={`https://${homepage}`}>
-          <Image src={link} width="18px" height="18px" alt="project page" />
+          <Image src={link} alt="project page" />
         </PageLink>
         )}
         <GitLink href={url}>
-          <Image src={github} width="20px" height="20px" alt="source control" />
+          <Image src={github} alt="source control" />
         </GitLink>
       </Card>
     )

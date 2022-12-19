@@ -67,7 +67,7 @@ export default function SkillCard({ image, name }: SkillCardProps) {
   }
   return (
     <Card>
-      <Image src={imgSrc} width="24px" height="24px" alt="Tech Icon" />
+      <Image src={imgSrc} alt="Tech Icon" />
       <Name>{name}</Name>
     </Card>
   )

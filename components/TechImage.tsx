@@ -42,5 +42,5 @@ export default function SkillCard({ image }: SkillCardProps) {
     default:
       break;
   }
-  return <Image src={imgSrc} width="18px" height="18px" alt="Tech Icon" />
+  return <Image src={imgSrc} alt="Tech Icon" />
 }
