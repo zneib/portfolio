@@ -99,42 +99,40 @@ const BlogHome: NextPage = () => {
       </Head>
       <TopSection>
         <Link href="/">
-          <a>
-            <h2>Home</h2>
-          </a>
+          <h2>Home</h2>
         </Link>
         <SocialLinks>
-          <a href="https://github.com/zneib">
+          <Link href="https://github.com/zneib">
             <Image src={github} alt="source control" />
-          </a>
-          <a href="https://twitter.com/zachadackis">
+          </Link>
+          <Link href="https://twitter.com/zachadackis">
             <Image src={twitter} alt="social" />
-          </a>
+          </Link>
         </SocialLinks>
       </TopSection>
       <Wrapper>
         <LeftNav>
-          <NavItem><span>Svelte</span><Image src={svelte} alt="tech icon" width="15px" height="15px" /></NavItem>
-          <NavItem><span>React</span><Image src={react} alt="tech icon" width="15px" height="15px" /></NavItem>
-          <NavItem><span>JavaScript</span><Image src={javascript} alt="tech icon" width="15px" height="15px" /></NavItem>
-          <NavItem><span>TypeScript</span><Image src={typescript} alt="tech icon" width="15px" height="15px" /></NavItem>
-          <NavItem><span>Deno</span><Image src={deno} alt="tech icon" width="15px" height="15px" /></NavItem>
-          <NavItem><span>HTML</span><Image src={html} alt="tech icon" width="15px" height="15px" /></NavItem>
-          <NavItem><span>CSS</span><Image src={css} alt="tech icon" width="15px" height="15px" /></NavItem>
-          <NavItem><span>Node</span><Image src={node} alt="tech icon" width="15px" height="15px" /></NavItem>
+          <NavItem><span>Svelte</span><Image src={svelte} alt="tech icon" /></NavItem>
+          <NavItem><span>React</span><Image src={react} alt="tech icon" /></NavItem>
+          <NavItem><span>JavaScript</span><Image src={javascript} alt="tech icon" /></NavItem>
+          <NavItem><span>TypeScript</span><Image src={typescript} alt="tech icon" /></NavItem>
+          <NavItem><span>Deno</span><Image src={deno} alt="tech icon" /></NavItem>
+          <NavItem><span>HTML</span><Image src={html} alt="tech icon" /></NavItem>
+          <NavItem><span>CSS</span><Image src={css} alt="tech icon" /></NavItem>
+          <NavItem><span>Node</span><Image src={node} alt="tech icon" /></NavItem>
         </LeftNav>
         <BlogContent>
           <Link href="/blog/svelte/class-toggle">
-            <a><BlogCard contentType="svelte" title="An easy way to toggle class names in Svelte components" month="Oct" year="2022" /></a>
+            <BlogCard contentType="svelte" title="An easy way to toggle class names in Svelte components" month="Oct" year="2022" />
           </Link>
           <Link href="/blog/deno/variables">
-            <a><BlogCard contentType="deno" title="How to use environment variables in your Deno apps" month="Sept" year="2022" /></a>
+            <BlogCard contentType="deno" title="How to use environment variables in your Deno apps" month="Sept" year="2022" />
           </Link>
           <Link href="/blog/javascript/atMethod">
-            <a><BlogCard contentType="javascript" title="Finding last indexes with the array at() method" month="Sept" year="2022" /></a>
+            <BlogCard contentType="javascript" title="Finding last indexes with the array at() method" month="Sept" year="2022" />
           </Link>
           <Link href="/blog/svelte/child-binding">
-            <a><BlogCard contentType="svelte" title="How to bind child component state and events to parent components" month="Aug" year="2022" /></a>
+            <BlogCard contentType="svelte" title="How to bind child component state and events to parent components" month="Aug" year="2022" />
           </Link>
         </BlogContent>
       </Wrapper>

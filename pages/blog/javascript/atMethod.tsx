@@ -58,21 +58,19 @@ const AtMethod: NextPage = () => {
   return (
     <Wrapper>
       <TopSection>
-        <Link href="/blog">
-          <a style={{ display: 'flex', alignItems: 'center' }}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-            </svg>
-            <h2 style={{ display: 'inline-block', marginLeft: '0 0 0 5px' }}>Blog</h2>
-          </a>
+        <Link href="/blog" style={{ display: 'flex', alignItems: 'center' }}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+          <h2 style={{ display: 'inline-block', marginLeft: '0 0 0 5px' }}>Blog</h2>
         </Link>
         <SocialLinks>
-          <a href="https://github.com/zneib">
+          <Link href="https://github.com/zneib">
             <Image src={github} alt="source control" />
-          </a>
-          <a href="https://twitter.com/zachadackis">
+          </Link>
+          <Link href="https://twitter.com/zachadackis">
             <Image src={twitter} alt="social" />
-          </a>
+          </Link>
         </SocialLinks>
       </TopSection>
       <Content>

@@ -86,20 +86,18 @@ const Home: NextPageWithLayout = () => {
       </Head>
       <TopSection>
         <Link href="/blog">
-          <a>
-            <h2>Blog</h2>
-          </a>
+          <h2>Blog</h2>
         </Link>
         <SocialLinks>
-          <a href="https://github.com/zneib">
+          <Link href="https://github.com/zneib">
             <Image src={github} alt="source control" />
-          </a>
-          <a href="https://codepen.io/zneib/pens/public">
+          </Link>
+          <Link href="https://codepen.io/zneib/pens/public">
             <Image src={codepen} alt="quick frontend projects" />
-          </a>
-          <a href="https://codesandbox.io/dashboard/recent?workspace=98c8b503-0a70-449f-bb0a-1be0067a8634">
+          </Link>
+          <Link href="https://codesandbox.io/dashboard/recent?workspace=98c8b503-0a70-449f-bb0a-1be0067a8634">
             <Image src={codesandbox} alt="quick react projects" />
-          </a>
+          </Link>
         </SocialLinks>
       </TopSection>
       <h3>Summary</h3>
