@@ -102,7 +102,10 @@ const Home: NextPageWithLayout = () => {
       </TopSection>
       <h3>Summary</h3>
       <Section>
-        <SummaryText>Front End Engineer /  UI Specialist / Aspiring Full Stack Engineer </SummaryText>
+        <SummaryText>Front End Engineer /  UI Specialist / Aspiring Full Stack Engineer</SummaryText>
+      </Section>
+      <Section>
+        <SummaryText>Check out some of my GitHub projects below, or see what I build over on CodeSandbox and CodePen</SummaryText>
       </Section>
       <h3>Favorite Technologies / Frameworks</h3>
       <Section>
