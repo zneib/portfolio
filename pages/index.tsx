@@ -85,9 +85,6 @@ const Home: NextPageWithLayout = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <TopSection>
-        <Link href="/blog">
-          <h2>Blog</h2>
-        </Link>
         <SocialLinks>
           <Link href="https://github.com/zneib">
             <Image src={github} alt="source control" />
