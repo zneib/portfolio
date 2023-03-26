@@ -68,7 +68,6 @@ type ProjectCardProps = {
 }
 
 export default function ProjectCard({ name, description, homepage, url }: ProjectCardProps) {
-  console.log(name)
   const [languages, setLanguages] = useState<string[]>([]);
   useEffect(() => {
     const getLanguageInfo = async () => {
@@ -86,7 +85,7 @@ export default function ProjectCard({ name, description, homepage, url }: Projec
   if (!name) {
     return (
       <Card>
-        Loading...
+        Loading Projects...
       </Card>
     )
   } else {

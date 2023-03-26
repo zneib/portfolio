@@ -112,15 +112,19 @@ const Home: NextPageWithLayout = () => {
       </Section>
       <h3>Active Projects</h3>
       <Section>
-        {currentProjects?.length > 0 && currentProjects?.map((item: Repo, index) => (
+        {currentProjects?.length > 0 ? currentProjects?.map((item: Repo, index) => (
           <ProjectCard key={index} name={item.name} description={item.description} homepage={item.homepage} url={item.html_url} />
-        ))}
+        )) : (
+          <ProjectCard name="" description="" homepage="" url="" />
+        )}
       </Section>
       <h3>Hibernating Projects</h3>
       <Section>
-        {pastProjects?.length > 0 && pastProjects.map((item: Repo, index) => (
+        {pastProjects?.length > 0 ? pastProjects.map((item: Repo, index) => (
           <ProjectCard key={index} name={item.name} description={item.description} homepage={item.homepage} url={item.html_url} />
-        ))}
+        )) : (
+          <ProjectCard name="" description="" homepage="" url="" />
+        )}
       </Section>
     </>
   )
