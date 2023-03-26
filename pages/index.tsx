@@ -52,7 +52,7 @@ type Repo = {
   description: string;
   homepage: string;
   html_url: string;
-  updated_at: string;
+  pushed_at: string;
 }
 
 const Home: NextPageWithLayout = () => {
@@ -68,8 +68,8 @@ const Home: NextPageWithLayout = () => {
       });
       const repos = await res.json();
       if (repos) {
-        const sorted = repos.sort((a: Repo, b: Repo) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
-        setCurrentProjects(sorted.splice(0, 3));
+        const sorted = repos.sort((a: Repo, b: Repo) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime());
+        setCurrentProjects(sorted.splice(0, 4));
         setPastProjects(sorted.splice(4, 6));
       }
     }
