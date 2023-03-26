@@ -12,6 +12,7 @@ const TopSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 10px;
   color: #000;
   @media (prefers-color-scheme: dark) {
     color: var(--gray-ten);
@@ -77,7 +78,8 @@ const Home: NextPageWithLayout = () => {
     getRepoInfo();
   }, [])
 
-  const technologies = [ 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Svelte', 'Deno', 'Node']
+  const technologies = [ 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React / Next.js', 'Svelte / SvelteKit', 'Deno', 'Node.js']
+
   return (
     <>
       <Head>
@@ -98,8 +100,8 @@ const Home: NextPageWithLayout = () => {
             </svg>
           </Link>
           <Link href="https://codesandbox.io/dashboard/recent?workspace=98c8b503-0a70-449f-bb0a-1be0067a8634">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" width="30px" height="30px">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000" width="30px" height="30px">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
             </svg>
           </Link>
         </SocialLinks>

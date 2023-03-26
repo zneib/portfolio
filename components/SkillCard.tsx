@@ -41,13 +41,13 @@ export default function SkillCard({ image, name }: SkillCardProps) {
     case 'deno':
       imgSrc = deno
       break;
-    case 'node':
+    case 'node.js':
       imgSrc = node
       break;
-    case 'svelte':
+    case 'svelte / sveltekit':
       imgSrc = svelte
       break;
-    case 'react':
+    case 'react / next.js':
       imgSrc = react
       break;
     case 'javascript':
