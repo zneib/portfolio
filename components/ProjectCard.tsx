@@ -108,5 +108,4 @@ export default function ProjectCard({ name, description, homepage, url }: Projec
       </Card>
     )
   }
-
 }
