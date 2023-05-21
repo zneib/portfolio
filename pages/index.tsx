@@ -3,11 +3,9 @@ import Layout from '../components/Layout';
 import type { NextPageWithLayout } from './_app';
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image';
 import styled from 'styled-components';
 import SkillCard from '../components/SkillCard';
 import ProjectCard from '../components/ProjectCard';
-import obi from '/obi.webp';
 
 const TopSection = styled.section`
   display: flex;
@@ -86,7 +84,7 @@ const Home: NextPageWithLayout = () => {
     }
   })
 
-  const technologies = [ 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React / Next.js', 'Svelte / SvelteKit', 'Deno', 'Node.js']
+  const technologies = [ 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React / Next.js', 'Svelte / SvelteKit', 'Deno', 'Node.js', 'D3.js']
 
   return (
     <>
@@ -119,7 +117,6 @@ const Home: NextPageWithLayout = () => {
             </svg>
           </Link>
         </SocialLinks>
-        <Image src={obi} alt="Hello There" width={500} height={300} unoptimized={true} />
       </TopSection>
       <h3>Summary</h3>
       <Section>
