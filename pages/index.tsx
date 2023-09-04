@@ -84,7 +84,7 @@ const Home: NextPageWithLayout = () => {
     }
   })
 
-  const technologies = [ 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React / Next.js', 'Svelte / SvelteKit', 'Deno', 'Node.js', 'D3.js']
+  const technologies = [ 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React / Next.js', 'Svelte / SvelteKit', 'Deno', 'Node.js']
 
   return (
     <>
