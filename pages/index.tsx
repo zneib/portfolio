@@ -117,6 +117,9 @@ const Home: NextPageWithLayout = () => {
             </svg>
           </Link>
         </SocialLinks>
+        <Link href="/blog">
+          <h3>Blog</h3>
+        </Link>
       </TopSection>
       <h3>Summary</h3>
       <Section>
