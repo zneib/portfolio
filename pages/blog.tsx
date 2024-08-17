@@ -6,9 +6,15 @@ const Page = styled.section`
   height: 100vh;
   padding-top: 25px;
 `
-const PostSection = styled.section`
-  margin: 0 auto;
+const PostWrapper = styled.section`
   width: 50%;
+  margin: 0 auto;
+  @media screen and (max-width: 375px) {
+    width: 80%;
+  }
+`
+const PostInfo = styled.div`
+  margin: 0 auto;
   background-color: #fff;
   border: 2px solid var(--gray-five);
   border-radius: 5px;
@@ -38,10 +44,12 @@ const Blog: NextPageWithLayout = () => {
       <Link href="/">
         <BackButton>Back</BackButton>
       </Link>
-      <div style={{ textAlign: 'center', margin: '20px auto' }}>It's Bloggin' Time</div>
-      <Link href="/popoverPost"><PostSection>The Popover API - <span style={{ fontSize: '12px' }}>8/16/2024</span></PostSection></Link>
-      <Separator />
-      <Link href="/dialogPost"><PostSection>New <code>&lt;dialog&gt;</code> Element - <span style={{ fontSize: '12px' }}>5/18/24</span></PostSection></Link>
+      <PostWrapper>
+        <div style={{ textAlign: 'center', margin: '20px auto' }}>It's Bloggin' Time</div>
+        <Link href="/popoverPost"><PostInfo>The Popover API - <span style={{ fontSize: '12px' }}>8/16/2024</span></PostInfo></Link>
+        <Separator />
+        <Link href="/dialogPost"><PostInfo>New <code>&lt;dialog&gt;</code> Element - <span style={{ fontSize: '12px' }}>5/18/24</span></PostInfo></Link>
+      </PostWrapper>
     </Page>
   )
 }

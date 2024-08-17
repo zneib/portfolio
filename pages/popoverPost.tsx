@@ -16,6 +16,19 @@ const Text = styled.article`
     text-decoration: underline;
   }
 `
+const ImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  & > img {
+    width: 100%;
+  }
+  @media screen and (max-width: 375px) {
+    width: 80%;
+  }
+`
 const TextCentered = styled.article`
   margin: 20px auto;
   width: 50%;
@@ -50,9 +63,9 @@ const PopOverPost: NextPageWithLayout = () => {
       Modern frameworks and libraries have helped make these kinds of things pretty easy to bake in most of the time. But sometimes, the CSS can still be a little tricky to get right each time.</Text>
 
       <Text>Here's a super basic example -</Text>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <Image width={800} src={basic} alt="Basic Popover" />
-      </div>
+      <ImageWrapper>
+        <Image src={basic} alt="Basic Popover" style={{ objectFit: 'contain' }} />
+      </ImageWrapper>
       <TextCentered>Try it out on <Link href="https://codepen.io/zneib/pen/MWMrLKz" target="_blank" >CodePen</Link></TextCentered>
     </Page>
   )
