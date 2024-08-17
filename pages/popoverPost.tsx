@@ -12,6 +12,13 @@ const Text = styled.article`
     text-decoration: underline;
   }
 `
+const BackButton = styled.span`
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  border: 2px solid black;
+  padding: 5px 10px;
+`
 type CodeSnippetProps = {
   codeString: string;
 }
@@ -23,7 +30,7 @@ const PopOverPost: NextPageWithLayout = () => {
   return (
     <>
       <Link href="/blog">
-        Back
+        <BackButton>Back</BackButton>
       </Link>
       <Text>One of my favorite new things in HTML has landed this year. The Popover API. I thought the <CodeSnippet codeString='dialog' /> element was already super handy, but I see myself using the Popover API even more now that it's fully supported across all browsers.</Text>
       <Text>As of April 2024 this new API is available across all major desktop and mobile browsers. So right now, we can use these new features everywhere in updated browsers.</Text>
