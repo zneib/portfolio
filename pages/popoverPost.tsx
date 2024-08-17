@@ -4,6 +4,10 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import basic from '../public/blog/popovers/basic_popover.png'
 
+const Page = styled.section`
+  height: 100vh;
+  padding-top: 25px;
+`
 const Text = styled.article`
   margin: 20px auto;
   width: 50%;
@@ -12,10 +16,17 @@ const Text = styled.article`
     text-decoration: underline;
   }
 `
+const TextCentered = styled.article`
+  margin: 20px auto;
+  width: 50%;
+  line-height: 20px;
+  text-align: center;
+  & > a {
+    text-decoration: underline;
+  }
+`
 const BackButton = styled.span`
-  position: fixed;
-  top: 20px;
-  left: 20px;
+  margin: 20px 0 0 20px;
   border: 2px solid black;
   padding: 5px 10px;
 `
@@ -28,7 +39,7 @@ const CodeSnippet = ({ codeString }: CodeSnippetProps) => {
 
 const PopOverPost: NextPageWithLayout = () => {
   return (
-    <>
+    <Page>
       <Link href="/blog">
         <BackButton>Back</BackButton>
       </Link>
@@ -42,9 +53,8 @@ const PopOverPost: NextPageWithLayout = () => {
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <Image width={800} src={basic} alt="Basic Popover" />
       </div>
-      <Text>Here is a very basic example of how it works <Link href="https://codepen.io/zneib/pen/MWMrLKz" target="_blank" >CodePen</Link></Text>
-
-    </>
+      <TextCentered>Try it out on <Link href="https://codepen.io/zneib/pen/MWMrLKz" target="_blank" >CodePen</Link></TextCentered>
+    </Page>
   )
 }
 

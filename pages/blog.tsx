@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const Page = styled.section`
   height: 100vh;
+  padding-top: 25px;
 `
 const PostSection = styled.section`
   margin: 0 auto;
@@ -16,11 +17,13 @@ const PostSection = styled.section`
     border: 2px solid var(--gray-six);
     cursor: pointer;
   }
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--gray-five);
+    border: 2px solid var(--gray-seven);
+  }
 `
 const BackButton = styled.span`
-  position: fixed;
-  top: 20px;
-  left: 20px;
+  margin: 20px 0 0 20px;
   border: 2px solid black;
   padding: 5px 10px;
 `
