@@ -24,6 +24,7 @@ const Blog: NextPageWithLayout = () => {
         Back
       </Link>
       <div>Blog Page</div>
+      <Link href="/popoverPost"><PostSection>The Popover API - <span style={{ fontSize: '12px' }}></span>8/16/2024</PostSection></Link>
       <Link href="/dialogPost"><PostSection>New <code>&lt;dialog&gt;</code> Element - <span style={{ fontSize: '12px' }}>5/18/24</span></PostSection></Link>
     </Page>
   )
