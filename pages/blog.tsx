@@ -4,13 +4,16 @@ import styled from 'styled-components';
 
 const Page = styled.section`
   height: 100vh;
+  height: 100dvh;
   padding-top: 25px;
 `
 const PostWrapper = styled.section`
-  width: 50%;
   margin: 0 auto;
-  @media screen and (max-width: 375px) {
+  @media screen and (min-width: 375px) {
     width: 80%;
+  }
+  @media screen and (min-width: 1080px) {
+    width: 50%;
   }
 `
 const PostInfo = styled.div`

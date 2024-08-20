@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Page = styled.section`
   height: 100vh;
+  height: 100dvh;
   padding-top: 25px;
 `
 const Title = styled.h1`
@@ -11,12 +12,17 @@ const Title = styled.h1`
   text-decoration: underline;
 `
 const ContentWrapper = styled.div`
-  width: 50%;
   margin: 20px auto;
   background-color: #fafafa;
   padding: 5px 15px;
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  @media screen and (min-width: 375px) {
+    width: 80%;
+  }
+  @media screen and (min-width: 1080px) {
+    width: 50%;
+  }
 `
 const Text = styled.article`
   margin: 20px auto;
@@ -46,7 +52,7 @@ const ImageWrapper = styled.div`
     margin-top: 15px;
   }
   @media screen and (max-width: 375px) {
-    width: 80%;
+    width: 100%;
   }
 `
 const BackButton = styled.span`
