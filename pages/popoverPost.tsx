@@ -2,7 +2,7 @@ import type { NextPageWithLayout } from './_app';
 import Link from 'next/link';
 import Image from 'next/image';
 import basic from '../public/blog/popovers/basic_popover.png'
-import { Page, ContentWrapper, Text, TextCentered, ImageWrapper, BackButton } from '../components/SharedStyles';
+import { Page, Title, ContentWrapper, Text, TextCentered, ImageWrapper, BackButton } from '../components/SharedStyles';
 
 type CodeSnippetProps = {
   codeString: string;
@@ -17,6 +17,7 @@ const PopOverPost: NextPageWithLayout = () => {
       <Link href="/blog">
         <BackButton>Back</BackButton>
       </Link>
+      <Title>Popover API</Title>
       <ContentWrapper>
         <Text>One of my favorite new things in HTML has landed this year. The Popover API. I thought the <CodeSnippet codeString='dialog' /> element was already super handy, but I see myself using the Popover API even more now that it's fully supported across all browsers.</Text>
         <Text>As of April 2024 this new API is available across all major desktop and mobile browsers. So right now, we can use these new features everywhere in updated browsers.</Text>

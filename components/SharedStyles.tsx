@@ -4,6 +4,12 @@ const Page = styled.section`
   height: 100vh;
   padding-top: 25px;
 `
+const Title = styled.h1`
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+  text-decoration: underline;
+`
 const ContentWrapper = styled.div`
   width: 50%;
   margin: 20px auto;
@@ -49,4 +55,4 @@ const BackButton = styled.span`
   padding: 5px 10px;
 `
 
-export { Page, ContentWrapper, Text, TextCentered, ImageWrapper, BackButton }
+export { Page, Title, ContentWrapper, Text, TextCentered, ImageWrapper, BackButton }
