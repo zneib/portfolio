@@ -31,6 +31,16 @@ const PopOverPost: NextPageWithLayout = () => {
         </ImageWrapper>
         <TextCentered>Try it out on <Link href="https://codepen.io/zneib/pen/MWMrLKz" target="_blank" >CodePen</Link></TextCentered>
       </ContentWrapper>
+      <ContentWrapper>
+        <Text>The popover attribute can have two values: auto or manual. Auto is the default. Auto also allows popovers to be "light dismissed". This means that when you click anywhere outside of the popover, it will close.</Text>
+        <Text>There two differences to keep in mind when using the "manual" value on the popover attributes.</Text>
+        <Text>
+          <ol>
+            <li>More than one popover can be show on the screen.</li>
+            <li>The "light dismissed" feature that comes with the auto value will no longer work. Since multiple manual popovers can be on the screen now.</li>
+          </ol>
+        </Text>
+      </ContentWrapper>
     </Page>
   )
 }
