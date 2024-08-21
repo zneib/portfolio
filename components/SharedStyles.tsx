@@ -5,11 +5,11 @@ const Page = styled.section`
   height: 100dvh;
   padding-top: 25px;
 `
-const Title = styled.h1`
+const Title = styled.h1<{ $underline?: boolean; }>`
   width: 50%;
   margin: 0 auto;
-  text-align: left;
-  text-decoration: underline;
+  text-align: center;
+  text-decoration: ${props => props?.$underline ? 'underline' : 'none'};
 `
 const ContentWrapper = styled.div`
   margin: 20px auto;
@@ -59,6 +59,9 @@ const BackButton = styled.span`
   margin: 20px 0 0 20px;
   border: 2px solid black;
   padding: 5px 10px;
+  @media (prefers-color-scheme: dark) {
+    border: 2px solid var(--gray-six);
+  }
 `
 
 export { Page, Title, ContentWrapper, Text, TextCentered, ImageWrapper, BackButton }

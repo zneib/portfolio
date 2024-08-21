@@ -1,6 +1,7 @@
 import type { NextPageWithLayout } from './_app';
 import Link from 'next/link';
 import styled from 'styled-components';
+import { BackButton } from '../components/SharedStyles';
 
 const Page = styled.section`
   height: 100vh;
@@ -30,11 +31,6 @@ const PostInfo = styled.div`
     background-color: var(--gray-five);
     border: 2px solid var(--gray-seven);
   }
-`
-const BackButton = styled.span`
-  margin: 20px 0 0 20px;
-  border: 2px solid black;
-  padding: 5px 10px;
 `
 
 const Separator = () => {

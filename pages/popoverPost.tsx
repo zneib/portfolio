@@ -17,7 +17,7 @@ const PopOverPost: NextPageWithLayout = () => {
       <Link href="/blog">
         <BackButton>Back</BackButton>
       </Link>
-      <Title>Popover API</Title>
+      <Title $underline>Popover API</Title>
       <ContentWrapper>
         <Text>One of my favorite new things in HTML has landed this year. The Popover API. I thought the <CodeSnippet codeString='dialog' /> element was already super handy, but I see myself using the Popover API even more now that it's fully supported across all browsers.</Text>
         <Text>As of April 2024 this new API is available across all major desktop and mobile browsers. So right now, we can use these new features everywhere in updated browsers.</Text>
