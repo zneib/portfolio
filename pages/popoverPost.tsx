@@ -28,7 +28,7 @@ const PopOverPost: NextPageWithLayout = () => {
       </ContentWrapper>
       <ContentWrapper>
         <ImageWrapper>
-          <Image src={basic} alt="Basic Popover" style={{ objectFit: 'contain' }} />
+          <Image src="https://pub-bddcd0e858fd41dcb523cf6161bdc546.r2.dev/blog/popovers/basic_popover.jpeg" width={500} height={300} alt="Basic Popover" style={{ objectFit: 'contain' }} />
         </ImageWrapper>
         <TextCentered>Try it out on <Link href="https://codepen.io/zneib/pen/MWMrLKz" target="_blank" >CodePen</Link></TextCentered>
       </ContentWrapper>
@@ -41,6 +41,13 @@ const PopOverPost: NextPageWithLayout = () => {
             <li>The "light dismissed" feature that comes with the auto value will no longer work. Since multiple manual popovers can be on the screen now.</li>
           </ol>
         </Text>
+      </ContentWrapper>
+      <ContentWrapper>
+        <Text>Multiple Manual Popovers:</Text>
+        <ImageWrapper>
+          <Image src="https://pub-bddcd0e858fd41dcb523cf6161bdc546.r2.dev/blog/popovers/multiple_popover.jpeg" width={500} height={300} alt="Basic Popover" style={{ objectFit: 'contain' }} />
+        </ImageWrapper>
+        <TextCentered>Try it out on <Link href="https://codepen.io/zneib/pen/OJevPBM?editors=1100" target="_blank" >CodePen</Link></TextCentered>
       </ContentWrapper>
     </Page>
   )
