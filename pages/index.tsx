@@ -84,7 +84,7 @@ const Home: NextPageWithLayout = () => {
     }
   })
 
-  const technologies = [ 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React / Next.js', 'Svelte / SvelteKit', 'Deno', 'Node.js']
+  const technologies = [ 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React / Next.js', 'Svelte / SvelteKit', 'Deno', 'Node.js', 'Swift / SwiftUI']
 
   return (
     <>
@@ -118,7 +118,7 @@ const Home: NextPageWithLayout = () => {
           </Link>
         </SocialLinks>
         <Link href="/blog">
-          <h3>Blog</h3>
+          <h3>Guides</h3>
         </Link>
       </TopSection>
       <h3>Summary</h3>

@@ -44,10 +44,7 @@ const Blog: NextPageWithLayout = () => {
         <BackButton>Back</BackButton>
       </Link>
       <PostWrapper>
-        <div style={{ textAlign: 'center', margin: '20px auto' }}>It's Bloggin' Time</div>
-        <Link href="/popoverPost"><PostInfo>The Popover API - <span style={{ fontSize: '12px' }}>8/16/2024</span></PostInfo></Link>
-        <Separator />
-        <Link href="/dialogPost"><PostInfo>New <code>&lt;dialog&gt;</code> Element - <span style={{ fontSize: '12px' }}>5/18/24</span></PostInfo></Link>
+        <div style={{ textAlign: 'center', margin: '20px auto' }}>Guides</div>
       </PostWrapper>
     </Page>
   )
