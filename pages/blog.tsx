@@ -45,6 +45,9 @@ const Blog: NextPageWithLayout = () => {
       </Link>
       <PostWrapper>
         <div style={{ textAlign: 'center', margin: '20px auto' }}>Guides</div>
+        <Link href="https://mapkitlabs.com" target="_blank">
+          <PostInfo>MapKitLabs - A visual playground with examples on how to use MapKitJS with Svelte</PostInfo>
+        </Link>
       </PostWrapper>
     </Page>
   )

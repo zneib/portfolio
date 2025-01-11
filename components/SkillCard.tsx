@@ -8,6 +8,7 @@ import typescript from '../public/typescript.svg';
 import javascript from '../public/javascript.svg';
 import css from '../public/css.svg';
 import html from '../public/html.svg';
+import swift from '../public/swift.svg';
 
 const Card = styled.div`
   display: flex;
@@ -61,6 +62,9 @@ export default function SkillCard({ image, name }: SkillCardProps) {
       break;
     case 'css':
       imgSrc = css
+      break;
+    case 'swift / swiftui':
+      imgSrc = swift
       break;
     default:
       break;
