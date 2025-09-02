@@ -75,7 +75,7 @@ const Home: NextPageWithLayout = () => {
         setPastProjects(sorted.splice(4, 6));
       }
     }
-    getRepoInfo();
+    // getRepoInfo();
   }, [])
 
   useEffect(() => {
