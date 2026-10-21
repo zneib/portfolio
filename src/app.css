@@ -36,7 +36,7 @@ a {
     color-scheme: light;
   }
   body {
-    background-image: linear-gradient(115deg, #E4E7EB, #616E7C), url(../public/brackets.svg);
+    background-image: linear-gradient(115deg, #E4E7EB, #616E7C), url('/brackets.svg');
     color: #000;
   }
 }
@@ -46,7 +46,7 @@ a {
     color-scheme: dark;
   }
   body {
-    background-image: linear-gradient(115deg, #243b53, #486581), url(../public/brackets.svg);
+    background-image: linear-gradient(115deg, #243b53, #486581), url('/brackets.svg');
     color: var(--gray-ten);
   }
 }
