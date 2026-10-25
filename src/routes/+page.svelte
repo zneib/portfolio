@@ -42,9 +42,6 @@
 				</svg>
 			</a>
 		</div>
-		<a href="/blog">
-			<h3>Guides</h3>
-		</a>
 	</section>
 	<h3>Summary</h3>
 	<section class="section">
