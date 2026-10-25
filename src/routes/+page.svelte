@@ -1,6 +1,22 @@
 <script lang="ts">
 	import Layout from '#lib/components/Layout.svelte';
 	import SkillCard from '#lib/components/SkillCard.svelte';
+	import ProjectCard from '#lib/components/ProjectCard.svelte';
+
+	const projects = [
+		{
+			name: 'Portfolio',
+			description: 'This site, built with SvelteKit.',
+			href: 'https://github.com/zneib/portfolio',
+			tags: ['Svelte', 'TypeScript']
+		},
+		{
+			name: 'MapKitLabs',
+			description: 'Playground for learning and mastering MapKit.js from Apple.',
+			href: 'https://www.mapkitlabs.com/',
+			tags: ['Svelte', 'TypeScript']
+		}
+	];
 
 	const technologies = [ 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React / Next.js', 'Svelte / SvelteKit', 'Deno', 'Node.js', 'Swift / SwiftUI'];
 </script>
@@ -41,6 +57,12 @@
 	<section class="section">
 		{#each technologies as item}
 			<SkillCard image={item.toLowerCase()} name={item} />
+		{/each}
+	</section>
+	<h3>Projects</h3>
+	<section class="section">
+		{#each projects as project}
+			<ProjectCard {...project} />
 		{/each}
 	</section>
 </Layout>
