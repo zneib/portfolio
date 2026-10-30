@@ -18,7 +18,7 @@
 		}
 	];
 
-	const technologies = [ 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React / Next.js', 'Svelte / SvelteKit', 'Deno', 'Node.js', 'Swift / SwiftUI'];
+	const technologies = [ 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React / Next.js', 'Svelte / SvelteKit', 'Node.js', 'Swift / SwiftUI'];
 </script>
 
 <svelte:head>

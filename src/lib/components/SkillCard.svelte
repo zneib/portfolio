@@ -1,5 +1,4 @@
 <script lang="ts">
-	import deno from '#lib/assets/deno.svg';
 	import svelte from '#lib/assets/svelte.svg';
 	import react from '#lib/assets/react.svg';
 	import node from '#lib/assets/node.svg';
@@ -17,7 +16,6 @@
 	let { image, name }: SkillCardProps = $props();
 
 	const images: Record<string, string> = {
-		deno,
 		'node.js': node,
 		'svelte / sveltekit': svelte,
 		'react / next.js': react,
